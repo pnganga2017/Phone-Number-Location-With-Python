@@ -107,25 +107,19 @@ Run your code again. You will see the name of the service provider on your scree
 The whole code is shown below
 
 1. main.py
-
 import phonenumbers
 from test import number
-
 from phonenumbers import geocoder
 ch_nmber = phonenumbers.parse(number,"CH")
 print(geocoder.description_for_number(ch_nmber,"en"))
-
 from phonenumbers import carrier
 service_nmber = phonenumbers.parse(number,"RO")
 print(carrier.name_for_number(service_nmber,"en"))
-
 from phonenumbers import timezone
 r_number = phonenumbers.parse(number,"RO")
 print(timezone.time_zones_for_number(r_number))
 
-
 2. test.py
-
 number = input("Please enter mobile number with +_____ :")
 from test import number
 
